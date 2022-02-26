@@ -12,8 +12,8 @@ public enum LotteryRule {
         this.number = number;
     }
 
-    public static boolean checkRange(int number) {
-        return number >= MINIMUM.number && number <= MAXIMUM.number;
+    public static boolean isOutOfNumber(int number) {
+        return number < MINIMUM.number || number > MAXIMUM.number;
     }
 
     public int getNumber() {
